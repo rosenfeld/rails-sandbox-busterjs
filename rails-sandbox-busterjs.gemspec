@@ -7,16 +7,13 @@ require "rails-sandbox-busterjs/version"
 Gem::Specification.new do |s|
   s.name        = "rails-sandbox-busterjs"
   s.version     = RailsSandboxBusterjs::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of RailsSandboxBusterjs."
-  s.description = "TODO: Description of RailsSandboxBusterjs."
+  s.authors     = ["Rodrigo Rosenfeld Rosas"]
+  s.email       = ["rr.rosas@gmail.com"]
+  s.homepage    = "http://github.com/rosenfeld/rails-sandbox-busterjs"
+  s.summary     = "Buster.js test runner for Rails Sandbox Assets plugin"
+  s.description = %q{Run your Buster.js tests/specs taking full advantage of the Rails Assets Pipeline}
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,lib,vendor}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.add_dependency "rails", "~> 3.2.5"
-  # s.add_dependency "jquery-rails"
-
-  s.add_development_dependency "sqlite3"
+  s.add_dependency "rails-sandbox-assets"
 end
