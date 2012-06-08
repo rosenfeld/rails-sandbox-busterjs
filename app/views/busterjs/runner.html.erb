@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <title>Buster.js Test Runner</title>
+
+  <%= stylesheet_link_tag "buster-test" %>
+  <%= javascript_include_tag "buster-test" %>
+  <%= javascript_tag "buster.spec.expose()" unless Rails.configuration.sandbox_assets.options[:skip_buster_bdd] %>
+
+<% @stylesheets.each do |css| -%>
+  <%= stylesheet_link_tag css %>
+<% end -%>
+
+<% @tests.each do |test| -%>
+  <%= javascript_include_tag test %>
+<% end -%>
+
+</head>
+<body>
+</body>
+</html>
